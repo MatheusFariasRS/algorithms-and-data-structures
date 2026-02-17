@@ -1,0 +1,16 @@
+# Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Logs
+*.log
+
+# SO / misc
+.DS_Store
+
+# Environment variables / secrets
+.env
