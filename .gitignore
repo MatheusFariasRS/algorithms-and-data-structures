@@ -1,24 +1,22 @@
+# Windows / NTFS metadata
 *Zone.Identifier
 
-# Build directories
-/target/
-/build/
-/out/
+# Build output (any depth)
+**/target/
+**/build/
+**/out/
 
 # IDEs
-# IntelliJ
-.idea/
-*.iml
-
-# VS Code
-.vscode/
+**/.idea/
+**/*.iml
+**/.vscode/
 
 # Logs
-*.log
+**/*.log
 
 # OS files
 .DS_Store
 Thumbs.db
 
 # Compiled files
-*.class
+**/*.class
