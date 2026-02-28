@@ -24,12 +24,16 @@ public class Seller {
 
             JsonNode root = new ObjectMapper().readTree(inputStream);
 
+            double maxAmount = 0.0;
+            String seller = "";
             for (JsonNode jn : root){
-                System.out.println(jn.get("id").asInt() + " " +jn.get("title").asText());
-                for (JsonNode lesson : jn.get("lessons")){
-                    System.out.println(lesson.get("title").asText());
+
+                if (jn.get("amount").asDouble() > maxAmount){
+                    maxAmount = jn.get("amount").asDouble();
+                    seller = jn.get("name").asText();
                 }
             }
+            System.out.println("name: " + seller + "\namount: " + maxAmount);
         }
         catch (Exception e){
             throw new RuntimeException(e);
